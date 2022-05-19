@@ -19,8 +19,6 @@ class UsuarioService {
     lateinit var response:Response
     private val logger = LoggerFactory.getLogger(javaClass)
 
-    var usuariosUtils: UsuariosUtils = UsuariosUtils()
-
     fun criarUsuario(novoUsuarioBody: Usuario):Response{
         logger.info("Iniciado as validações para criação de Usuario")
         novoUsuarioBody.dCadastro = LocalDateTime.now().toString()
